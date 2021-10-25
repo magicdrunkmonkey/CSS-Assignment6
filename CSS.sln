@@ -7,11 +7,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		index.html = index.html
 		Login.html = Login.html
+		StyleSheet1.css = StyleSheet1.css
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pictures", "Pictures", "{14CC5D2F-4929-480A-A285-FB3B145F4F97}"
 	ProjectSection(SolutionItems) = preProject
 		AloeVera.jfif = AloeVera.jfif
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSS", "CSS", "{88CF9354-A53F-4955-BC2C-8DC2610AFEB6}"
+	ProjectSection(SolutionItems) = preProject
+		StyleSheet1.css = StyleSheet1.css
 	EndProjectSection
 EndProject
 Global
