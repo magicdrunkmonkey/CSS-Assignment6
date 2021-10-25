@@ -1,7 +1,15 @@
 ﻿/*
-    • All text on the pages should use a sans-serif font family. 
+    • All text on the pages should use a sans-serif font family.
+    • The pages should be 1024 pixels wide, and be centered on the page, with equal margins 
+      to the left and right.
 */
-body
-{
+body {
     font-family: sans-serif;
+    width: 1024px;
+    text-align: center;    
+}
+
+body > header {
+    display: flex;
+    background-color: yellow;
 }
