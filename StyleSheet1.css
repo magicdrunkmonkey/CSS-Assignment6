@@ -46,7 +46,8 @@ body > main{
             /*text-decoration: none;*/
         }
 
-        header > h1 { /*Rubrik*/
+        /*Header rubrik*/
+        header > h1 { 
             margin: 0px;
             display: flex;
             justify-content: center;
@@ -54,13 +55,15 @@ body > main{
             background-color: yellow;            
         }
 
-        header > nav { /*Lista med länkar*/
+        /*Header lista med länkar*/
+        header > nav { 
             background-color: lightpink;
             justify-content: center;
             align-items: center;
         }
 
-        header > a { /*Växla mellan Home och Login*/
+        /*Header växla mellan Home och Login*/
+        header > a { 
             margin: 0;
             display: flex;
             justify-content: center;
