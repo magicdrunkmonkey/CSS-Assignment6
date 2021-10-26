@@ -6,10 +6,57 @@
 body {
     font-family: sans-serif;
     width: 1024px;
-    text-align: center;    
+    text-align: center;
 }
 
-body > header {
-    display: flex;
-    background-color: yellow;
-}
+    body > header {   /*Skapa ramar för header-elementen så man kan se vad som pågår*/
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 10px;
+        background-color: Blue;
+        padding: 10px;          
+    }
+
+        body > header > ul {
+            /*display: flex;*/
+            text-align: left;
+            margin: 0;
+            padding: 0px;            
+        }
+
+        body > header > li {
+            display: flex;
+            float: left;
+            padding: 0 20px 0 20px;
+            text-align: left;
+        }
+
+            body > header > li a {
+                display:flex
+                color: white;
+                padding-left: 10px;
+                
+                /*text-decoration: none;*/
+            }
+
+        body > header > h1 { /*Rubrik*/
+            margin: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: yellow;            
+        }
+
+        body > header > nav { /*Lista med länkar*/
+            background-color: white;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        body > header > a { /*Växla mellan Home och Login*/
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: lawngreen;
+        }
