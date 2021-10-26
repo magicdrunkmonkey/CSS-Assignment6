@@ -18,6 +18,14 @@ body > main{
     grid-row: 1 / 2;
 }
 
+body > aside{
+    grid-row: 2 / 3;
+}
+
+body > footer{
+    grid-row: 3 / 4;
+}
+
     header { /*Skapa ramar för header-elementen så man kan se vad vad man gör och vad som pågår*/
         display: grid;
         grid-template-columns: auto auto auto;        
