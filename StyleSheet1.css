@@ -6,37 +6,40 @@
 body {
     font-family: sans-serif;
     width: 1024px;
-    text-align: center;
+    justify-content: center;
+    /*text-align: center;*/
 }
 
-    body > header {   /*Skapa ramar för header-elementen så man kan se vad som pågår*/
+    body > header { /*Skapa ramar för header-elementen så man kan se vad vad man gör och pågår*/
         display: grid;
+
         grid-template-columns: auto auto auto auto;
+        padding: 10px;
         grid-gap: 10px;
         background-color: Blue;
-        padding: 10px;          
     }
 
         body > header > ul {
-            /*display: flex;*/
+            display: flex;
+            list-style: none;
             list-style-type: none;
-            text-align: left;
+            align-items:  flex-start;
             margin: 0;
-            padding: 0px;            
+            padding: 0px;
         }
 
         body > header > li {
             display: inline;
             float: left;
-            padding: 0 20px 0 20px;
-            text-align: left;
+            padding: 0px 20px 0px 20px;
+            text-align: unset;
         }
 
             body > header > li a {
-                display:flex
+                display: inline;
+                display: flex;
                 color: white;
                 padding-left: 10px;
-                
                 /*text-decoration: none;*/
             }
 
