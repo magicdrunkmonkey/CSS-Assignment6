@@ -27,6 +27,7 @@ body > main{
             display: flex;
             list-style: none;
             list-style-type: none;
+            justify-content: center;
             align-items: flex-start;
             margin: 0;
             padding: 0px;
@@ -35,15 +36,15 @@ body > main{
         header li {
             display: flex;
             float: left;
-            padding: 0px 20px 0px 20px;
+            padding-left: 20px;
+            
             text-align: unset;
         }
 
         header > li a {
-            display: flex;
-            padding: 20px 0px 0px 0px;
+            display: flex;            
             color: white;
-            padding-left: 10px;
+            padding-left: 20px;
             /*text-decoration: none;*/
         }
 
@@ -77,9 +78,11 @@ aside {
     background-color: chartreuse;
     justify-content: center;
 }
-aside ul{
-    
-}    
+    aside ul {
+        display: flex;
+        list-style: none;
+        justify-content: center;
+    }    
 
     aside li {
         
