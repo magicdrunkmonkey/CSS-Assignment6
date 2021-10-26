@@ -15,7 +15,7 @@ body > main{
     grid-row: 1 / 2;
 }
 
-    header { /*Skapa ramar för header-elementen så man kan se vad vad man gör och pågår*/
+    header { /*Skapa ramar för header-elementen så man kan se vad vad man gör och vad som pågår*/
         display: grid;
         grid-template-columns: auto auto auto auto;
         padding: 10px;
@@ -58,7 +58,7 @@ body > main{
         /*Header lista med länkar*/
         header > nav { 
             background-color: lightpink;
-            justify-content: center;
+            justify-content: stretch;
             align-items: center;
         }
 
