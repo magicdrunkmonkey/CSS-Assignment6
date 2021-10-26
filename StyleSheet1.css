@@ -7,10 +7,10 @@ body {
     font-family: sans-serif;
     width: 1024px;
     justify-content: center;
-    /*text-align: center;*/
+    text-align: center;
 }
 
-    body > header { /*Skapa ramar för header-elementen så man kan se vad vad man gör och pågår*/
+    header { /*Skapa ramar för header-elementen så man kan se vad vad man gör och pågår*/
         display: grid;
         grid-template-columns: auto auto auto auto;
         padding: 10px;
@@ -18,31 +18,31 @@ body {
         background-color: Blue;
     }
 
-        body > header > ul {
+        header > ul {
             display: flex;
             list-style: none;
             list-style-type: none;
-            align-items:  flex-start;
+            align-items: flex-start;
             margin: 0;
             padding: 0px;
         }
 
-        body > header > li {
+        header li {
             display: flex;
             float: left;
             padding: 0px 20px 0px 20px;
             text-align: unset;
         }
 
-            body > header > li a {
-                display: flex;
-                display: flex;
-                color: white;
-                padding-left: 10px;
-                /*text-decoration: none;*/
-            }
+        header > li a {
+            display: flex;
+            padding: 20px 0px 0px 0px;
+            color: white;
+            padding-left: 10px;
+            /*text-decoration: none;*/
+        }
 
-        body > header > h1 { /*Rubrik*/
+        header > h1 { /*Rubrik*/
             margin: 0px;
             display: flex;
             justify-content: center;
@@ -50,13 +50,13 @@ body {
             background-color: yellow;            
         }
 
-        body > header > nav { /*Lista med länkar*/
+        header > nav { /*Lista med länkar*/
             background-color: white;
             justify-content: center;
-            align-items: flex-start;
+            align-items: center;
         }
 
-        body > header > a { /*Växla mellan Home och Login*/
+        header > a { /*Växla mellan Home och Login*/
             margin: 0;
             display: flex;
             justify-content: center;
