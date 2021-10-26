@@ -8,6 +8,11 @@ body {
     width: 1024px;
     justify-content: center;
     text-align: center;
+    background-color: darkorange ;
+}
+
+body > main{
+    grid-row: 1 / 2;
 }
 
     header { /*Skapa ramar för header-elementen så man kan se vad vad man gör och pågår*/
@@ -51,7 +56,7 @@ body {
         }
 
         header > nav { /*Lista med länkar*/
-            background-color: white;
+            background-color: lightpink;
             justify-content: center;
             align-items: center;
         }
@@ -63,3 +68,23 @@ body {
             align-items: center;
             background-color: lawngreen;
         }
+
+main {
+
+}
+
+aside {
+    background-color: chartreuse;
+    justify-content: center;
+}
+aside ul{
+    
+}    
+
+    aside li {
+        
+    }
+
+footer{
+
+}
