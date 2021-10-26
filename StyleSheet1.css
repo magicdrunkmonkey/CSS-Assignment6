@@ -12,7 +12,6 @@ body {
 
     body > header { /*Skapa ramar för header-elementen så man kan se vad vad man gör och pågår*/
         display: grid;
-
         grid-template-columns: auto auto auto auto;
         padding: 10px;
         grid-gap: 10px;
@@ -29,14 +28,14 @@ body {
         }
 
         body > header > li {
-            display: inline;
+            display: flex;
             float: left;
             padding: 0px 20px 0px 20px;
             text-align: unset;
         }
 
             body > header > li a {
-                display: inline;
+                display: flex;
                 display: flex;
                 color: white;
                 padding-left: 10px;
