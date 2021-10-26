@@ -21,13 +21,14 @@ body > main{
         padding: 10px;
         grid-gap: 10px;
         background-color: Blue;
+        
     }
 
         header > ul {
             display: flex;
             list-style: none;            
-            justify-content: center;
-            align-items: flex-start;
+            justify-content: left;
+            align-items: center;
             margin: 0;
             padding: 0px;
         }
@@ -58,13 +59,13 @@ body > main{
         /*Header lista med länkar*/
         header > nav { 
             background-color: lightpink;
-            justify-content: stretch;
+            justify-content: center;
             align-items: center;
+            padding-bottom:20px;
         }
 
         /*Header växla mellan Home och Login*/
-        header > a { 
-            margin: 0;
+        header > a {             
             display: flex;
             justify-content: center;
             align-items: center;
