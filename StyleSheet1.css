@@ -5,9 +5,12 @@
 */
 body {
     font-family: sans-serif;
-    width: 1024px;
+    max-width: 1024px;
+    margin: auto;
+    /* Attempt 1
+    width: 1024px;*/
     justify-content: center;
-    text-align: center;
+    text-align: center;    
     background-color: darkorange ;
 }
 
