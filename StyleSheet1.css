@@ -59,6 +59,7 @@ body > main{
         /*Header lista med länkar*/
         header > nav { 
             background-color: lightpink;
+            
             justify-content: center;
             align-items: center;
             padding-bottom:20px;
