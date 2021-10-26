@@ -17,7 +17,7 @@ body > main{
 
     header { /*Skapa ramar för header-elementen så man kan se vad vad man gör och vad som pågår*/
         display: grid;
-        grid-template-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto;        
         padding: 10px;
         grid-gap: 10px;
         background-color: Blue;
@@ -68,9 +68,11 @@ body > main{
         /*Header växla mellan Home och Login*/
         header > a {             
             display: flex;
+            flex-grow: 1;            
             justify-content: center;
             align-items: center;
             background-color: lawngreen;
+            width: none;
         }
 
 main {
