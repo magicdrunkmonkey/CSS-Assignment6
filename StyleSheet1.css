@@ -18,17 +18,7 @@ body {
     background-color: darkorange ;
 }
 
-body > main{
-    grid-row: 1 / 2;
-}
 
-body > aside{
-    grid-row: 2 / 3;
-}
-
-body > footer{
-    grid-row: 3 / 4;
-}
 
 header { /*Skapa ramar för header-elementen så man kan se vad vad man gör och vad som pågår*/
     display: grid;                          /*Grid skapar förutsättning för ett rutnät*/
@@ -41,8 +31,8 @@ header { /*Skapa ramar för header-elementen så man kan se vad vad man gör och
     header > ul {               /* enbart barnet 'ul' till föräldern 'header' som påverkas och inte barnbarn.*/
         display: flex;          /*Ordnar innehållet i containern 'ul' på en rad*/
         list-style: none;       /*Tar bort punkteringen för en osorterad lista*/
-        justify-content: left;  /*Vänsterjustera innehållet i containern ul*/
-        align-items: center;    /*Centrera innehållet i containerna ul*/
+        justify-content: left;  /*Vänsterjustera vågrätt innehållet i containern ul*/
+        align-items: center;    /*Centrera lodrätt innehållet i containerna ul*/
         margin: 0;              /*Tar bort marginalen som är yttersta lagret för containern*/
         padding: 0px;           /*Tar bort padding som är lagret precis utanför innehållet för containern*/
     }
@@ -94,6 +84,7 @@ header { /*Skapa ramar för header-elementen så man kan se vad vad man gör och
 main { /*Skapar ramar så man ser vad som händer */
     display: grid;                                                  /*Grid skapar förutsättning för ett rutnät*/
     grid-template-areas:  "1fr" "1fr" "1fr" / "1fr" "1fr" "1fr";    /*Skapar 3 rader / 3 kolumner i display:grid */    
+     
     grid-gap: 10px;                                                 /*Bestämmer avståndet mellan kolumnerna i rutnätet*/
     padding: 10px;                                                  /*Sätter avståndet i ramen runt containern 'main' */
     background-color: hotpink;                                      /*Färga continern så man ser vad som händer.*/
@@ -101,26 +92,41 @@ main { /*Skapar ramar så man ser vad som händer */
     main * {
         background-color: yellow;
     }
+    /*
+    .h2-rubrik{
+        grid-area: 1 / 1 / 2 / 2;
+    }*/
+    main > div {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    /* Attempt 1
     main > h2 {
         grid-area: 1 / 1 / 2 / 2;       /*Placering på översta vänstra hörnet i 3x3 grid*/
         /*display: flex;
         justify-content: left;
         align-items:  normal;*/
-        /*background-color: hotpink; /*För att se vad som är main > h1*/
+        /*background-color: hotpink; /*För att se vad som är main > h1*//*
     }
     main > p {
-        /*display: flex;*/
+        grid-area: 
+        /*display: flex;*//*
         color: darkred;
         justify-content: left;
         align-items: normal;
-        /*background-color: hotpink; /*Eftersom det hör ihop med main > h1*/
+        /*background-color: hotpink; /*Eftersom det hör ihop med main > h1*//*
     }
-    main > article { 
-        background-color: hotpink;
+    */
+    main > article.item3 { 
+        grid-area: 2 / 1 / 3 / 2;       /*Placering av de två <articles> 2:a radens början till 2:a raden mitten i grid: 3x3 */
     }
-article {
-    background-color: hotpink;
-}
+    main > article.item4 {
+        grid-area: 2 / 2 / 3 / 3; /*Placering av de två <articles> 2:a radens början till 2:a raden mitten i grid: 3x3 */
+    }
+
+    main > aside{
+        grid-area: 1 / 3 / 4 / 4;
+    }
 
 aside {
     background-color: chartreuse;
@@ -135,12 +141,13 @@ aside {
     aside li {
         
     }
+    /* Attempt 1 aside
 .aside {
     position: absolute;
     top: 8px;
     right: 16px;
     font-size: 18px;
-}
+}*/
     footer{
-
+        padding-bottom: 20px;
 }
