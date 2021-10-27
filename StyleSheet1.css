@@ -88,7 +88,7 @@ header { /*Skapa ramar för header-elementen så man kan se vad vad man gör och
 main {
     
 }
-    main > h1 {
+    main > h2 {
         display: flex;
         justify-content: left;
         align-items:  normal;
