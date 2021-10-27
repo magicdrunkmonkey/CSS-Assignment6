@@ -94,6 +94,12 @@ main {
         align-items:  normal;
         background-color: hotpink; /*För att se vad som är main > h1*/
     }
+    main > p {
+        display: flex;
+        justify-content: left;
+        align-items: normal;
+        background-color: hotpink; /*Eftersom det hör ihop med main > h1*/
+    }
 
 aside {
     background-color: chartreuse;
