@@ -107,7 +107,7 @@ main { /*Skapar ramar så man ser vad som händer */
     .h2-rubrik{
         grid-area: 1 / 1 / 2 / 2;
     }*/
-    main > div.div {
+    main > div{
         grid-area: 2 / 1 / 3 / 2;
     }
 
