@@ -3,20 +3,28 @@
     • The pages should be 1024 pixels wide, and be centered on the page, with equal margins 
       to the left and right.
 */
-html{
-
-}
-
-body {
+html {
     font-family: sans-serif;
     max-width: 1024px;
     margin: auto;
-    /* Attempt 1
-    width: 1024px;*/
-    justify-content: center;
-    text-align: center;    
-    background-color: darkorange ;
 }
+
+body {
+    /* Attempt 2  kanske inte funkar att göra en grid i en grid.
+    display: grid;
+    grid-template-areas: "2fr" "2fr" "2fr" "2fr"/ "2fr" "2fr" "2fr"; /*Skapar 4 rader / 3 kolumner i display:grid */
+    /* Attempt 1
+    width: 1024px;*/ */
+    justify-content: center;
+    text-align: center;
+    background-color: darkorange;
+}
+
+/*  Attempt 2  kanske inte funkar att försöka göra en grid i en grid
+body > header.header{
+    grid-area: 1 / 1 / 5 /2;
+
+}*/
 
 
 
@@ -123,12 +131,13 @@ main { /*Skapar ramar så man ser vad som händer */
     main > article.item4 {
         grid-area: 2 / 2 / 3 / 3; /*Placering av de två <articles> 2:a radens början till 2:a raden mitten i grid: 3x3 */
     }
-
-    main > aside{
+    
+    main > aside.asideClass{           /*Attempt 1*/
         grid-area: 1 / 3 / 4 / 4;
     }
 
 aside {
+    /*grid-area: 1 / 3 / 4 / 4;*/
     background-color: chartreuse;
     justify-content: center;
 }
