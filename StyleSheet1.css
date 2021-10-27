@@ -3,6 +3,10 @@
     • The pages should be 1024 pixels wide, and be centered on the page, with equal margins 
       to the left and right.
 */
+html{
+
+}
+
 body {
     font-family: sans-serif;
     max-width: 1024px;
