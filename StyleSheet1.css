@@ -26,14 +26,13 @@ body > footer{
     grid-row: 3 / 4;
 }
 
-    header { /*Skapa ramar för header-elementen så man kan se vad vad man gör och vad som pågår*/
-        display: grid;
-        grid-template-columns: auto auto auto;        
-        padding: 10px;
-        grid-gap: 10px;
-        background-color: Blue;
-        
-    }
+header { /*Skapa ramar för header-elementen så man kan se vad vad man gör och vad som pågår*/
+    display: grid;                          /*Grid skapar förutsättning för ett rutnät*/
+    grid-template-columns: auto auto auto;  /*Konfigurerar rutnätet grid i kolumner, 3 auto ger 3 kolumner*/
+    grid-gap: 10px;                         /*Bestämmer avståndet mellan kolumnerna i rutnätet*/
+    padding: 10px;                          /*Sätter avståndet i ramen runt containern för header*/
+    background-color: Blue;                 /*Header backgrund blir blå*/
+}
 
         header > ul {
             display: flex;
@@ -85,10 +84,15 @@ body > footer{
             background-color: lawngreen;
             width: none;
         }
-
 main {
-
+    
 }
+    main > h1 {
+        display: flex;
+        justify-content: left;
+        align-items:  normal;
+        background-color: hotpink; /*För att se vad som är main > h1*/
+    }
 
 aside {
     background-color: chartreuse;
