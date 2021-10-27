@@ -43,46 +43,48 @@ header { /*Skapa ramar för header-elementen så man kan se vad vad man gör och
         padding: 0px;           /*Tar bort padding som är lagret precis utanför innehållet för containern*/
     }
 
-    header li {             /* enbart barnet 'li' till föräldern 'header' som påverkas och inte barnbarn. */
+    header li {             /* alla <li> inuti en <header> påverkas (ättling) */
         display: flex;      /*Ordnar innehållet i containern 'ul' på en rad */
         float: left;        /*Vänsterjustera 'li' i containern 'header' */
         padding-left: 20px; /*Varje 'li'-container får en vänster-padding */
     }
 
-        header > li a {
-            display: flex;            
-            color: white;
-            padding-left: 20px;
-            /*text-decoration: none;*/
-        }
+    header > li a {         /*enbart barnet 'li' till föräldern 'header' och <a> inuti <li>*/
+        display: flex;      /*Ordnar innehållet i containern 'ul' på en rad */
+        color: white;       /*Gör textfärgen vit*/
+        padding-left: 20px; /*Varje 'a'-container får en vänster-padding (fast funkar inte just nu) */
+
+        /*Överblivet från tidigare försök*/
+        /*-------------------------------*/
+        /*text-decoration: none;*/
+    }
 
         /*Header rubrik*/
-        header > h1 { 
-            margin: 0px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: yellow;            
-        }
+    header > h1 { /* alla <h1> inuti en <header> påverkas (ättling) */
+        margin: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: yellow;
+    }
 
         /*Header lista med länkar*/
-        header > nav { 
-            background-color: lightpink;
-            
-            justify-content: center;
-            align-items: center;
-            padding-bottom:20px;
-        }
+    header > nav { /* alla <nav> inuti en <header> påverkas (ättling) */
+        background-color: lightpink;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 20px;
+    }
 
         /*Header växla mellan Home och Login*/
-        header > a {             
-            display: flex;
-            flex-grow: 1;            
-            justify-content: center;
-            align-items: center;
-            background-color: lawngreen;
-            width: none;
-        }
+    header > a { /* alla <a> inuti en <header> påverkas (ättling) */
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+        align-items: center;
+        background-color: lawngreen;
+        width: none;
+    }
 main {
     
 }
