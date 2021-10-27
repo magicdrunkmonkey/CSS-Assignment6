@@ -34,21 +34,20 @@ header { /*Skapa ramar för header-elementen så man kan se vad vad man gör och
     background-color: Blue;                 /*Header backgrund blir blå*/
 }
 
-        header > ul {
-            display: flex;
-            list-style: none;            
-            justify-content: left;
-            align-items: center;
-            margin: 0;
-            padding: 0px;
-        }
+    header > ul {               /* enbart barnet 'ul' till föräldern 'header' som påverkas och inte barnbarn.*/
+        display: flex;          /*Ordnar innehållet i containern 'ul' på en rad*/
+        list-style: none;       /*Tar bort punkteringen för en osorterad lista*/
+        justify-content: left;  /*Vänsterjustera innehållet i containern ul*/
+        align-items: center;    /*Centrera innehållet i containerna ul*/
+        margin: 0;              /*Tar bort marginalen som är yttersta lagret för containern*/
+        padding: 0px;           /*Tar bort padding som är lagret precis utanför innehållet för containern*/
+    }
 
-        header li {
-            display: flex;
-            float: left;
-            padding-left: 20px;            
-            /*text-align: unset;*/
-        }
+    header li {             /* enbart barnet 'li' till föräldern 'header' som påverkas och inte barnbarn. */
+        display: flex;      /*Ordnar innehållet i containern 'ul' på en rad */
+        float: left;        /*Vänsterjustera 'li' i containern 'header' */
+        padding-left: 20px; /*Varje 'li'-container får en vänster-padding */
+    }
 
         header > li a {
             display: flex;            
