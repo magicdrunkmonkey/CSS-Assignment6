@@ -85,32 +85,38 @@ header { /*Skapa ramar för header-elementen så man kan se vad vad man gör och
         background-color: lawngreen;
         width: none;
     }
-main {
-    display: grid;                      /*Grid skapar förutsättning för ett rutnät*/
-    grid-template-columns: auto auto;   /*Skapar två kolumner i display:grid */
-    grid-gap: 10px;                     /*Bestämmer avståndet mellan kolumnerna i rutnätet*/
-    padding: 10px;                      /*Sätter avståndet i ramen runt containern 'main' */
-    background-color: white;            /*Färga constinern så man ser vad som händer.*/
+
+    
+main { /*Skapar ramar så man ser vad som händer */
+    display: grid;                                                  /*Grid skapar förutsättning för ett rutnät*/
+    grid-template-areas:  "1fr" "1fr" "1fr" / "1fr" "1fr" "1fr";    /*Skapar 3 rader / 3 kolumner i display:grid */    
+    grid-gap: 10px;                                                 /*Bestämmer avståndet mellan kolumnerna i rutnätet*/
+    padding: 10px;                                                  /*Sätter avståndet i ramen runt containern 'main' */
+    background-color: hotpink;                                      /*Färga continern så man ser vad som händer.*/
 }
+    main * {
+        background-color: yellow;
+    }
     main > h2 {
-        display: flex;
+        grid-area: 1 / 1 / 2 / 2;       /*Placering på översta vänstra hörnet i 3x3 grid*/
+        /*display: flex;
         justify-content: left;
-        align-items:  normal;
-        background-color: hotpink; /*För att se vad som är main > h1*/
+        align-items:  normal;*/
+        /*background-color: hotpink; /*För att se vad som är main > h1*/
     }
     main > p {
-        display: flex;
+        /*display: flex;*/
         color: darkred;
         justify-content: left;
         align-items: normal;
-        background-color: hotpink; /*Eftersom det hör ihop med main > h1*/
+        /*background-color: hotpink; /*Eftersom det hör ihop med main > h1*/
     }
-    main > article {                        /*Skapar ramar så man ser vad som händer */
-        
+    main > article { 
+        background-color: hotpink;
     }
-    article{
-        
-    }
+article {
+    background-color: hotpink;
+}
 
 aside {
     background-color: chartreuse;
