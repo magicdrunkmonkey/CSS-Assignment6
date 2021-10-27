@@ -107,7 +107,7 @@ main { /*Skapar ramar så man ser vad som händer */
     .h2-rubrik{
         grid-area: 1 / 1 / 2 / 2;
     }*/
-    main > div{
+    main > div.div{
         grid-area: 2 / 1 / 3 / 2;
     }
 
@@ -129,7 +129,7 @@ main { /*Skapar ramar så man ser vad som händer */
     }
     */
     main > article.item3 { 
-        grid-area: 3 / 1 / 2 / 4;       /*Placering av de två <articles> 2:a radens början till 2:a raden mitten i grid: 3x3 */
+        grid-area: 3 / 1 / 4 / 2;       /*Placering av de två <articles> 2:a radens början till 2:a raden mitten i grid: 3x3 */
     }
     main > article.item4 {
         grid-area: 3 / 2 / 4 / 3;       /*Placering av de två <articles> 2:a radens början till 2:a raden mitten i grid: 3x3 */
