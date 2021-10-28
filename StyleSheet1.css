@@ -163,18 +163,33 @@ main { /*Skapar ramar så man ser vad som händer */
         background-color: cornflowerblue;
         text-transform: uppercase;
     }
-    main > form.formClass {  /*Designing the Login Form*/
-        justify-self:center;
-        border-radius: 25px;
-        border: 2px solid #73AD21;
+
+    /*Failed attempt 3*/
+    main > form{
+        /*border: 100px;*/
+    }
+
+    /*Fungerar*/
+    main > form.formClass { /*Designing the Login Form*/
+        justify-self: center;
+        border-radius: 25px;            /*Ger rundade hörn, cirkelcenter ligger 25px diagonalt från hörnen*/
+        border: 5px solid black;        /*Betyder att login ramen blir svart och 5px tjock*/
+        /*border: 2px solid thick;*/
+        color: Blue;                    /*Betyder textfärg blå*/
+        font-size: 25px;                /*Betyder att fonten tar upp 25px på längen och bredden*/
+        font-weight: 500;               /*Bold-skala med siffror från 100 till 900, där 100 är tunnast ochh 900 tjockast, 400 anses normalstorlek*/
         padding: 20px;
         width: 200px;
         height: 150px;
     }
+
+    main > form.formClass label
+    /*Failed attempt 1 */
     main.mainLogin {
-        justify-content:center;
-        text-align:center;
+        /*justify-content:center;
+        text-align:center;*/
     }
+    /*Failed attempt 2 */
     main > input {
         padding: 5px;
         background-color: black;        
