@@ -185,13 +185,16 @@ main { /*Skapar ramar så man ser vad som händer */
         background-color: blueviolet;
     }
 
-    main > form.formClass label
+    /*Failed attempt 2 */
+    main > form.formClass label{
+
+    }
     /*Failed attempt 1 */
     main.mainLogin {
         /*justify-content:center;
         text-align:center;*/
     }
-    /*Failed attempt 2 */
+    
 .resetButton {
     padding: 5px;
     border-radius: 20px;        /*knapp med rundade hörn*/
