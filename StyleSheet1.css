@@ -14,23 +14,41 @@ html {
 body {
     /* Attempt 2  kanske inte funkar att göra en grid i en grid. */
     display: grid;
-    grid-template-areas: "1fr" "1fr" "1fr" "1fr" "1fr"/ "1fr" "1fr" "1fr"; /*Skapar 4 rader / 3 kolumner i display:grid */
+    /*/grid-template-areas: "1fr" "1fr" "1fr" "1fr" "1fr"/ "1fr" "1fr" "1fr"; /*Skapar 5 rader / 3 kolumner i display:grid */
+    /**/
+    /*Test 1, grid-template*/
+    /*grid-template-areas: "a a a"
+        "b b b"
+        "c c c"
+        "d d d"; /*Skapar 4 rader / 3 kolumner i display:grid *
+     /**/
+    /*Test 2, grid-template*/
+     grid-template: [header-left] "head head head"  [header-right]
+                 [main-left]   "main  main aside"   [main-right]
+                 [footer-left] "foot  foot foot"  [footer-right]
+                 / 120px 1fr;
     /* Attempt 1
     width: 1024px;*/
     background-color: darkorange;
 }
+    /*Failed attempt 3 , jag tror att det bara kommer göra två separata grid i varje istället för en gemensam*/
+    body  header, main {
+        /*display: grid;
+        grid-template-areas: "1fr" "1fr" "1fr" "1fr" "1fr"/ "1fr" "1fr" "1fr"; /*Skapar 5 rader / 3 kolumner i display:grid */
+    }
 
 /*  Attempt 2  kanske inte funkar att försöka göra en grid i en grid
 body > header.header{
     grid-area: 1 / 1 / 5 /2;
 
 }*/
-
+/* Attempt 3
 body > header.header{
     grid-area: 1 / 1 / 2 / 2;
-}
+}*/
 
 header { /*Skapa ramar för header-elementen så man kan se vad vad man gör och vad som pågår*/
+         grid-area: head;
     display: grid;                          /*Grid skapar förutsättning för ett rutnät*/
     /*grid-template-columns: auto auto auto;  /*Konfigurerar rutnätet grid i kolumner, 3 auto ger 3 kolumner*/
     grid-gap: 10px;                         /*Bestämmer avståndet mellan kolumnerna i rutnätet*/
@@ -84,7 +102,7 @@ header { /*Skapa ramar för header-elementen så man kan se vad vad man gör och
 
         /*Header växla mellan Home och Login*/
     header > a { /* alla <a> inuti en <header> påverkas (ättling) */
-        grid-area: 1 / 3 / 2 / 4;
+        grid-area: 1 / 3 / 2 / 4;       /*grid: 5x3 , Placering: 1,3 */
         display: flex;
         flex-grow: 1;
         justify-content: center;
@@ -92,23 +110,25 @@ header { /*Skapa ramar för header-elementen så man kan se vad vad man gör och
         background-color: lawngreen;
         width: none;
     }
-    
+
 main { /*Skapar ramar så man ser vad som händer */
-    /*display: grid;                                                  /*Grid skapar förutsättning för ett rutnät*/
-    /*grid-template-areas:  "1fr" "1fr" "1fr" / "1fr" "1fr" "1fr";  */  /*Skapar 3 rader / 3 kolumner i display:grid */      
-    padding-left: 10px;                                                 /*Sätter avståndet i ramen runt containern 'main' */
-    padding-right 10px;
-    background-color: hotpink;                                      /*Färga continern så man ser vad som händer.*/
+    grid-area: main;
+    /*display: grid; /*Grid skapar förutsättning för ett rutnät*/
+    /*/grid-template-areas: "2fr" "2fr" "2fr" / "2fr" "2fr" "2fr"; /*Skapar 3 rader / 3 kolumner i display:grid */
+    padding: 10px; /*Sätter avståndet i ramen runt containern 'main' */
+    grid-gap: 10px;
+    background-color: hotpink; /*Färga continern så man ser vad som händer.*/
 }
     main * {
         background-color: yellow;
+        
     }
     /*
     .h2-rubrik{
         grid-area: 1 / 1 / 2 / 2;
     }*/
-    main > div.div{
-        grid-area: 2 / 1 / 3 / 2;
+    main > div.div { /*Rubriken <h2> och <p>*/
+        /*grid-area: 2 / 1 / 3 / 2; /*grid: 5x3 , Placering: 2,1 */
     }
 
     /* Attempt 1
@@ -128,18 +148,18 @@ main { /*Skapar ramar så man ser vad som händer */
         /*background-color: hotpink; /*Eftersom det hör ihop med main > h1*//*
     }
     */
-    main > article.item3 { 
-        grid-area: 3 / 1 / 4 / 2;       /*Placering av de två <articles> 2:a radens början till 2:a raden mitten i grid: 3x3 */
+    main > article.item3 {          /*Article 1:a */
+        /*grid-area: 3 / 1 / 4 / 2;   /*Placering av första artikeln: 3,1/
     }
-    main > article.item4 {
-        grid-area: 3 / 2 / 4 / 3;       /*Placering av de två <articles> 2:a radens början till 2:a raden mitten i grid: 3x3 */
+    main > article.item4 {          /*Article 2:a*/
+        /*grid-area: 3 / 2 / 4 / 3;   /*Placering av första artikeln: 3,1/
     }
     /*
-    main > aside.asideClass{           /*Attempt 1*//*
-        grid-area: 1 / 3 / 4 / 4;
-    }*/
+    main > aside.asideClass{           /*Attempt 1*/ 
+       /* grid-area: 1 / 3 / 4 / 4;*/
+    }
 
-aside {
+        aside {
     /*grid-area: 1 / 3 / 4 / 4;*/
     background-color: chartreuse;
     justify-content: center;
@@ -148,6 +168,7 @@ aside {
         display: flex;
         list-style: none;
         justify-content: center;
+        text-align:center;
     }    
 
     aside li {
