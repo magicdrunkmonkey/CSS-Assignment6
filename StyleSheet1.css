@@ -23,9 +23,10 @@ body {
         "d d d"; /*Skapar 4 rader / 3 kolumner i display:grid *
      /**/
     /*Test 2, grid-template*/
+    /*Brist på förklaringar online*/
      grid-template: [header-left] "head head head"  [header-right]
-                    [main-left]   "main  main aside"   [main-right]
-                    [footer-left] "foot  foot foot"  [footer-right]
+                    [main-left]   "main main aside"   [main-right]
+                    [footer-left] "foot foot foot"  [footer-right]
                     / 120px 1fr;
     /* Attempt 1
     width: 1024px;*/
@@ -181,6 +182,7 @@ main { /*Skapar ramar så man ser vad som händer */
         padding: 20px;
         width: 200px;
         height: 150px;
+        background-color: blueviolet;
     }
 
     main > form.formClass label
@@ -190,12 +192,16 @@ main { /*Skapar ramar så man ser vad som händer */
         text-align:center;*/
     }
     /*Failed attempt 2 */
-    main > input {
-        padding: 5px;
-        background-color: black;        
-        color: white;
-        
-    }
+.resetButton {
+    padding: 5px;
+    background-color: black;
+    color: yellow;
+}
+.signInButton {
+    padding: 5px;
+    background-color: mediumaquamarine;
+    color: black;
+}
 
 aside {
     /*grid-area: 1 / 3 / 4 / 4;*/
