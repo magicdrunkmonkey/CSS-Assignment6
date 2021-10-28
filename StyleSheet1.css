@@ -194,13 +194,13 @@ main { /*Skapar ramar så man ser vad som händer */
     /*Failed attempt 2 */
 .resetButton {
     padding: 5px;
-    border-radius: 20px;
+    border-radius: 20px;        /*knapp med rundade hörn*/
     background-color: black;
     color: yellow;
 }
 .signInButton {
     padding: 5px;
-    border-radius: 20px;
+    border-radius: 20px;        /*knapp med rundade hörn*/
     background-color: mediumaquamarine;
     color: black;
 }
