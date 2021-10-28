@@ -24,9 +24,9 @@ body {
      /**/
     /*Test 2, grid-template*/
      grid-template: [header-left] "head head head"  [header-right]
-                 [main-left]   "main  main aside"   [main-right]
-                 [footer-left] "foot  foot foot"  [footer-right]
-                 / 120px 1fr;
+                    [main-left]   "main  main aside"   [main-right]
+                    [footer-left] "foot  foot foot"  [footer-right]
+                    / 120px 1fr;
     /* Attempt 1
     width: 1024px;*/
     background-color: darkorange;
@@ -113,8 +113,8 @@ header { /*Skapa ramar för header-elementen så man kan se vad vad man gör och
 
 main { /*Skapar ramar så man ser vad som händer */
     grid-area: main;
-    /*display: grid; /*Grid skapar förutsättning för ett rutnät*/
-    /*/grid-template-areas: "2fr" "2fr" "2fr" / "2fr" "2fr" "2fr"; /*Skapar 3 rader / 3 kolumner i display:grid */
+    display: grid; /*Grid skapar förutsättning för ett rutnät*/
+    grid-template-areas: "1fr" "1fr" "1fr" / "1fr" "1fr" "1fr"; /*Skapar grid med 3 rader / 3 kolumner inne i main */
     padding: 10px; /*Sätter avståndet i ramen runt containern 'main' */
     grid-gap: 10px;
     background-color: hotpink; /*Färga continern så man ser vad som händer.*/
@@ -129,6 +129,7 @@ main { /*Skapar ramar så man ser vad som händer */
     }*/
     main > div.div { /*Rubriken <h2> och <p>*/
         /*grid-area: 2 / 1 / 3 / 2; /*grid: 5x3 , Placering: 2,1 */
+        grid-area: 1 / 1 / 2 / 2;
     }
 
     /* Attempt 1
@@ -149,26 +150,31 @@ main { /*Skapar ramar så man ser vad som händer */
     }
     */
     main > article.item3 {          /*Article 1:a */
-        /*grid-area: 3 / 1 / 4 / 2;   /*Placering av första artikeln: 3,1/
+        grid-area: 2 / 1 / 3 / 2;   /*Placering av första artikeln: 3,1/
     }
     main > article.item4 {          /*Article 2:a*/
-        /*grid-area: 3 / 2 / 4 / 3;   /*Placering av första artikeln: 3,1/
+        grid-area: 2 / 2 / 3 / 3;   /*Placering av första artikeln: 3,1/
     }
     /*
     main > aside.asideClass{           /*Attempt 1*/ 
        /* grid-area: 1 / 3 / 4 / 4;*/
     }
 
-        aside {
+aside {
     /*grid-area: 1 / 3 / 4 / 4;*/
     background-color: chartreuse;
     justify-content: center;
+    padding:10px;
+}
+aside *{
+    background-color: yellow;
 }
     aside ul {
-        display: flex;
+        /*display: flex;*/
+        
         list-style: none;
         justify-content: center;
-        text-align:center;
+        /*text-align:center;*/
     }    
 
     aside li {
@@ -181,6 +187,12 @@ main { /*Skapar ramar så man ser vad som händer */
     right: 16px;
     font-size: 18px;
 }*/
-    footer{
-        padding-bottom: 20px;
+footer {
+    grid-area: 5 / 1 / 6 / 4;
+    justify-content:center;
+    text-align:center;
+    padding: 10px;
+}
+footer * {
+    background-color: yellow;
 }
