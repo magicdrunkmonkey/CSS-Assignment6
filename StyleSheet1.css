@@ -67,7 +67,7 @@ header { /*Skapa ramar för header-elementen så man kan se vad vad man gör och
     }
 
     header li {             /* alla <li> inuti en <header> påverkas (ättling) */
-        display: flex;      /*Ordnar innehållet i containern 'ul' på en rad */
+        display: flex;      /*Ordnar innehållet i containern 'li' på en rad */
         float: left;        /*Vänsterjustera 'li' i containern 'header' */
         padding-left: 20px; /*Varje 'li'-container får en vänster-padding */
     }
@@ -151,10 +151,10 @@ main { /*Skapar ramar så man ser vad som händer */
     }
     */
     main > article.item3 {          /*Article 1:a */
-        grid-area: 2 / 1 / 3 / 2;   /*Placering av första artikeln: 3,1*/
+        grid-area: 2 / 1 / 3 / 2;   /*Placering av första artikeln*/
     }
     main > article.item4 {          /*Article 2:a*/
-        grid-area: 2 / 2 / 3 / 3;   /*Placering av första artikeln: 3,1/
+        grid-area: 2 / 2 / 3 / 3;   /*Placering av andra artikeln*/
     }
     /*
     main > aside.asideClass{           /*Attempt 1*/ 
@@ -177,7 +177,7 @@ main { /*Skapar ramar så man ser vad som händer */
         border: 5px solid black;        /*Betyder att login ramen blir svart och 5px tjock*/
         /*border: 2px solid thick;*/
         color: Blue;                    /*Betyder textfärg blå*/
-        font-size: 25px;                /*Betyder att fonten tar upp 25px på längen och bredden*/
+        font-size: 25px;                /*Betyder att fonten tar upp 25px på längden och bredden*/
         font-weight: 500;               /*Bold-skala med siffror från 100 till 900, där 100 är tunnast ochh 900 tjockast, 400 anses normalstorlek*/
         padding: 20px;
         width: 200px;
@@ -194,11 +194,13 @@ main { /*Skapar ramar så man ser vad som händer */
     /*Failed attempt 2 */
 .resetButton {
     padding: 5px;
+    border-radius: 20px;
     background-color: black;
     color: yellow;
 }
 .signInButton {
     padding: 5px;
+    border-radius: 20px;
     background-color: mediumaquamarine;
     color: black;
 }
