@@ -48,7 +48,7 @@ body > header.header{
     grid-area: 1 / 1 / 2 / 2;
 }*/
 
-header { /*Skapa ramar för header-elementen så man kan se vad vad man gör och vad som pågår*/
+header { /*Skapa ramar för header-elementen så man kan se vad vad man gör och vad som   pågår*/
          grid-area: head;
     display: grid;                          /*Grid skapar förutsättning för ett rutnät*/
     /*grid-template-columns: auto auto auto;  /*Konfigurerar rutnätet grid i kolumner, 3 auto ger 3 kolumner*/
