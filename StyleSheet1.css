@@ -12,7 +12,7 @@ html {
 }
 
 body {
-    /* Attempt 2  kanske inte funkar att göra en grid i en grid. */
+    /* Attempt 2  kanske inte funkar att göra en grid i en grid. gfhfhgfh*/
     display: grid;
     /*/grid-template-areas: "1fr" "1fr" "1fr" "1fr" "1fr"/ "1fr" "1fr" "1fr"; /*Skapar 5 rader / 3 kolumner i display:grid */
     /**/
